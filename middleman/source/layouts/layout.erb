@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title><%= current_page.data.title || 'Site Title' %></title>
+<%= stylesheet_link_tag 'app' %> 
+<%= javascript_include_tag 'app' %> 
+</head>
+<body>
+
+<header>
+<h1><a href="/"><%= image_tag '/img/logo.png' %></a></h1>
+<nav>
+  <ul>
+    <li><%= link_to 'Top', '/index.html' %></li>
+    <li><%= link_to 'About', '/about.html' %></li>
+    <li><%= link_to 'Help', '/help.html' %></li>
+  </ul>
+</nav>
+</header>
+
+<div class="content">
+<%= yield %>
+</div>
+
+<footer>
+<p>...</p>
+</footer>
+
+</body>
+</html>
